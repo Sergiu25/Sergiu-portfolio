@@ -34,6 +34,16 @@ export const experience = {
   ],
 };
 
+export const projects: {
+  title: string;
+  description: string;
+  technologies: string[];
+  links?: {
+    github?: string;
+    demo?: string;
+  };
+}[] = [];
+
 export const skills = [
   {
     group: 'Backend',
