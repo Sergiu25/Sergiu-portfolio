@@ -8,9 +8,9 @@ export const profile = {
   contactText:
     'I am open to junior Java/backend roles, internships and projects where I can build practical backend systems and keep improving as a developer.',
   links: {
-    email: 'mailto:your.email@example.com',
-    github: '#',
-    linkedin: '#',
+    email: 'mailto:sergiu.petris25@gmail.com',
+    github: 'https://github.com/Sergiu25',
+    linkedin: 'https://www.linkedin.com/in/sergiu-petris-b52958286/',
     cv: '#',
   },
 };
