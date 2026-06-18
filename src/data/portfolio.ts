@@ -11,7 +11,7 @@ export const profile = {
     email: 'mailto:sergiu.petris25@gmail.com',
     github: 'https://github.com/Sergiu25',
     linkedin: 'https://www.linkedin.com/in/sergiu-petris-b52958286/',
-    cv: '#',
+    cv: '/Sergiu-Catalin-Petris-CV.pdf',
   },
 };
 
@@ -47,19 +47,32 @@ export const projects: {
 export const skills = [
   {
     group: 'Backend',
-    items: ['Java', 'Quarkus', 'REST APIs', 'DTOs', 'validation', 'exception handling'],
+    items: [
+      'Java',
+      'Quarkus',
+      'REST APIs',
+      'DTOs',
+      'Validation',
+      'Exception handling',
+      'Hibernate ORM',
+      'Panache',
+    ],
   },
   {
     group: 'Databases',
-    items: ['PostgreSQL', 'Oracle', 'H2', 'SQL'],
+    items: ['PostgreSQL', 'Oracle', 'SQLite', 'SQL'],
+  },
+  {
+    group: 'Testing',
+    items: ['Unit tests', 'Mockito', 'H2'],
   },
   {
     group: 'Tools',
-    items: ['Git', 'Maven', 'Swagger/OpenAPI', 'IntelliJ IDEA'],
+    items: ['Git', 'Maven', 'Swagger/OpenAPI', 'Postman', 'Insomnia', 'IntelliJ IDEA'],
   },
   {
     group: 'Data/AI',
-    items: ['Python', 'pandas', 'scikit-learn', 'BERT', 'TF-IDF'],
+    items: ['Python', 'ML', 'LLM', 'MCP', 'BERT', 'TF-IDF'],
   },
   {
     group: 'Frontend basics',

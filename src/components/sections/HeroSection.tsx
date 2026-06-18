@@ -23,13 +23,20 @@ export function HeroSection() {
           <ButtonLink href="#contact" variant="primary">
             Contact me
           </ButtonLink>
-          <ButtonLink href={profile.links.cv}>Download CV</ButtonLink>
+          <ButtonLink href={profile.links.cv} download>
+            Download CV
+          </ButtonLink>
         </div>
       </div>
 
       <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-steel lg:mt-0">
         {socialLinks.map((link) => (
-          <a key={link.label} href={link.href} className="transition-colors hover:text-accent">
+          <a
+            key={link.label}
+            href={link.href}
+            download={link.label === 'CV' ? true : undefined}
+            className="transition-colors hover:text-accent"
+          >
             {link.label}
           </a>
         ))}

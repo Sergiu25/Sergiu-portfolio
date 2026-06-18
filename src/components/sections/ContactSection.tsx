@@ -92,7 +92,9 @@ export function ContactSection() {
           <ButtonLink href={profile.links.email} onClick={handleEmailClick} variant="primary">
             Contact me
           </ButtonLink>
-          <ButtonLink href={profile.links.cv}>Download CV</ButtonLink>
+          <ButtonLink href={profile.links.cv} download>
+            Download CV
+          </ButtonLink>
         </div>
 
         {isFormOpen ? (
@@ -152,6 +154,7 @@ export function ContactSection() {
             <a
               key={item.label}
               href={item.href}
+              download={item.label === 'CV' ? true : undefined}
               onClick={item.label === 'Email' ? handleEmailClick : undefined}
               className="rounded-lg border border-line bg-ink/40 p-5 transition-colors hover:border-accent"
             >
