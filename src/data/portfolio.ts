@@ -42,7 +42,80 @@ export const projects: {
     github?: string;
     demo?: string;
   };
-}[] = [];
+}[] = [
+  {
+    title: 'Essences MCP',
+    description:
+      'University Semantic Web project that combines an MCP-style JSON-RPC tool layer, LLM routing, REST, GraphQL and RDF/SPARQL into a conversational perfume review platform.',
+    technologies: ['Node.js', 'Express', 'MCP', 'LLM', 'REST', 'GraphQL', 'RDF4J', 'SPARQL'],
+    links: {
+      github: 'https://github.com/Sergiu25/Essences-MCP',
+    },
+  },
+  {
+    title: 'Medical Decision Support ML/LLM',
+    description:
+      'Bachelor thesis research project focused on medical text classification for decision support, comparing TF-IDF machine learning baselines, neural models and fine-tuned BERT approaches.',
+    technologies: ['Python', 'ML', 'LLM', 'BERT', 'TF-IDF', 'scikit-learn', 'PyTorch'],
+    links: {
+      github: 'https://github.com/Sergiu25/medical-decision-support-ml-llm',
+    },
+  },
+  {
+    title: 'Gym Management System',
+    description:
+      'Gym management solution with an ASP.NET Core backend/admin portal, REST API endpoints and a .NET MAUI mobile app for member sessions, subscriptions and attendance.',
+    technologies: ['.NET 9', 'ASP.NET Core', '.NET MAUI', 'SQLite', 'Entity Framework Core', 'JWT'],
+    links: {
+      github: 'https://github.com/Sergiu25/GymManagementProiectMedii',
+    },
+  },
+  {
+    title: 'Sergiu Portfolio',
+    description:
+      'Personal portfolio website built to present experience, skills, contact links and selected projects in a clean responsive interface.',
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    links: {
+      github: 'https://github.com/Sergiu25/Sergiu-portfolio',
+    },
+  },
+  {
+    title: 'Explain Like I5',
+    description:
+      'LLM-powered educational chatbot that explains complex topics in simple language through a Flask backend and React frontend.',
+    technologies: ['Python', 'Flask', 'React', 'LLM', 'Gemini API'],
+    links: {
+      github: 'https://github.com/Sergiu25/ExplainLikeI5',
+    },
+  },
+  {
+    title: 'Image To ASCII',
+    description:
+      'Flask web app that converts uploaded images into ASCII art by mapping pixel brightness values to text characters.',
+    technologies: ['Python', 'Flask', 'HTML', 'CSS', 'Image processing'],
+    links: {
+      github: 'https://github.com/Sergiu25/ImageToASCII',
+    },
+  },
+  {
+    title: 'Reddit Bot',
+    description:
+      'Python automation bot that monitors Reddit comments, calls external APIs and stores processed comments to avoid duplicate replies.',
+    technologies: ['Python', 'REST APIs', 'Automation', 'Database'],
+    links: {
+      github: 'https://github.com/Sergiu25/RedditBot',
+    },
+  },
+  {
+    title: 'Dashboard',
+    description:
+      'Dashboard project focused on building a practical interface for organizing and presenting information in a structured layout.',
+    technologies: ['Frontend', 'Dashboard UI'],
+    links: {
+      github: 'https://github.com/Sergiu25/Dashboard',
+    },
+  },
+];
 
 export const skills = [
   {
