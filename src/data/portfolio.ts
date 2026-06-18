@@ -1,12 +1,17 @@
 export const profile = {
   name: 'Sergiu-Catalin Petris',
-  title: 'Junior Java Backend Developer',
+  title: 'Junior Software Developer',
   summary:
-    'Economic Informatics graduate from Babe\u0219-Bolyai University, focused on Java backend development, REST APIs, databases and clean backend architecture.',
-  about:
-    'I am an Economic Informatics graduate from Babe\u0219-Bolyai University, with a strong interest in backend development, especially Java, REST APIs, databases, validation, exception handling and software architecture. I like understanding the problem before writing code and I prefer building practical, clear and maintainable solutions.',
+    'Economic Informatics graduate from Babe\u0219-Bolyai University, interested in building practical software across backend, data, AI and web projects.',
+  about: [
+    'I\u2019m Sergiu, a recent Economic Informatics graduate from Babe\u0219-Bolyai University, interested in software development, problem-solving, and building applications that are useful, clear, and well-structured.',
+    'My background sits somewhere between technology and business, which helps me look at software not only from a technical point of view, but also from the perspective of the people who will actually use it. I enjoy understanding how things work, breaking problems down, and finding practical solutions through code.',
+    'I\u2019ve worked mostly with Java and backend development so far, but I don\u2019t see myself limited to one technology or one area. I\u2019m open to learning new tools, working on different types of projects, and growing based on the problems I get to solve.',
+    'Outside of programming, I enjoy football, good conversations, and spending time with people. I\u2019m not trying to present myself as someone who only writes code all day. I like learning, asking questions, working with others, and improving through real experience.',
+    'Right now, I\u2019m focused on becoming a better software developer and finding opportunities where I can learn, contribute, and grow in a healthy technical environment.',
+  ],
   contactText:
-    'I am open to junior Java/backend roles, internships and projects where I can build practical backend systems and keep improving as a developer.',
+    'I am open to new opportunities where I can explore, grow, contribute to meaningful work and keep learning exciting things along the way.',
   links: {
     email: 'mailto:sergiu.petris25@gmail.com',
     github: 'https://github.com/Sergiu25',

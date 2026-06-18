@@ -14,6 +14,7 @@ export function Section({ id, title, children, className = '' }: SectionProps) {
       <div>
         <div className="mb-6">
           <h2 className="text-2xl font-bold tracking-normal text-slate-100 sm:text-3xl">{title}</h2>
+          <div className="mt-3 h-px w-full bg-gradient-to-r from-accent/70 via-sky-300/30 to-transparent" />
         </div>
         {children}
       </div>

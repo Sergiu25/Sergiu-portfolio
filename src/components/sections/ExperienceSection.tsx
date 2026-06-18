@@ -5,8 +5,8 @@ import { SkillPill } from '../ui/SkillPill';
 export function ExperienceSection() {
   return (
     <Section id="experience" eyebrow="Experience" title="Work Experience">
-      <article className="group rounded-lg border border-transparent p-0 transition-colors hover:border-line hover:bg-panel/70 sm:p-6">
-        <div>
+      <article className="surface-glow group rounded-lg border border-line/60 bg-panel/40 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-panel/70 sm:p-6">
+        <div className="relative">
           <h3 className="text-lg font-semibold text-slate-100 group-hover:text-accent">
             {experience.role}
           </h3>

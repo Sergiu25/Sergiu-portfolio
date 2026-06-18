@@ -17,11 +17,13 @@ export function ProjectsSection() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="rounded-lg border border-line/70 bg-panel/45 p-5 transition-colors hover:border-accent/40"
+              className="surface-glow rounded-lg border border-line/70 bg-panel/45 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-panel/65"
             >
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <div className="relative flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <h3 className="text-lg font-semibold text-slate-100">{project.title}</h3>
+                  <h3 className="text-lg font-semibold text-slate-100 transition-colors hover:text-accent">
+                    {project.title}
+                  </h3>
                   <p className="mt-3 text-sm leading-7 text-muted">{project.description}</p>
                 </div>
 
@@ -41,7 +43,7 @@ export function ProjectsSection() {
                 ) : null}
               </div>
 
-              <div className="mt-4 flex flex-wrap gap-2">
+              <div className="relative mt-4 flex flex-wrap gap-2">
                 {project.technologies.map((technology) => (
                   <SkillPill key={technology} label={technology} />
                 ))}

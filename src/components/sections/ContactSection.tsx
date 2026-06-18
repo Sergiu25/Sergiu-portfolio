@@ -1,4 +1,3 @@
-import { useState, type FormEvent } from 'react';
 import { profile } from '../../data/portfolio';
 import { Section } from '../layout/Section';
 import { ButtonLink } from '../ui/ButtonLink';
@@ -58,119 +57,39 @@ const contactItems = [
 ];
 
 export function ContactSection() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
-  function openContactForm() {
-    setIsFormOpen(true);
-  }
-
-  function handleEmailClick(event: React.MouseEvent<HTMLAnchorElement>) {
-    event.preventDefault();
-    openContactForm();
-  }
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    const formData = new FormData(event.currentTarget);
-    const name = String(formData.get('name') ?? '').trim();
-    const email = String(formData.get('email') ?? '').trim();
-    const message = String(formData.get('message') ?? '').trim();
-    const subject = encodeURIComponent(`Portfolio contact${name ? ` - ${name}` : ''}`);
-    const body = encodeURIComponent(
-      [`Name: ${name}`, `Email: ${email}`, '', message].join('\n'),
-    );
-
-    window.location.href = `${profile.links.email}?subject=${subject}&body=${body}`;
-  }
-
   return (
     <Section id="contact" eyebrow="Contact" title="Contact">
-      <div className="rounded-lg border border-line bg-panel/55 p-6 sm:p-7">
-        <p className="text-base leading-8 text-muted">{profile.contactText}</p>
-        <div className="mt-7 flex flex-wrap gap-3">
-          <ButtonLink href={profile.links.email} onClick={handleEmailClick} variant="primary">
-            Contact me
-          </ButtonLink>
-          <ButtonLink href={profile.links.cv} download>
-            Download CV
-          </ButtonLink>
-        </div>
+      <div className="surface-glow rounded-lg border border-line/70 bg-panel/55 p-6 sm:p-7">
+        <div className="relative">
+          <p className="text-base leading-8 text-muted">{profile.contactText}</p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <ButtonLink href={profile.links.cv} download variant="primary">
+              Download CV
+            </ButtonLink>
+          </div>
 
-        {isFormOpen ? (
-          <form onSubmit={handleSubmit} className="mt-8 grid gap-4">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <label className="grid gap-2 text-sm font-semibold text-steel">
-                Name
-                <input
-                  name="name"
-                  type="text"
-                  required
-                  className="min-h-11 rounded-md border border-line bg-ink/50 px-4 text-sm text-slate-100 outline-none transition-colors placeholder:text-muted focus:border-accent"
-                  placeholder="Your name"
-                />
-              </label>
-              <label className="grid gap-2 text-sm font-semibold text-steel">
-                Email
-                <input
-                  name="email"
-                  type="email"
-                  required
-                  className="min-h-11 rounded-md border border-line bg-ink/50 px-4 text-sm text-slate-100 outline-none transition-colors placeholder:text-muted focus:border-accent"
-                  placeholder="you@example.com"
-                />
-              </label>
-            </div>
-            <label className="grid gap-2 text-sm font-semibold text-steel">
-              Message
-              <textarea
-                name="message"
-                required
-                rows={5}
-                className="resize-none rounded-md border border-line bg-ink/50 px-4 py-3 text-sm leading-7 text-slate-100 outline-none transition-colors placeholder:text-muted focus:border-accent"
-                placeholder="Write your message"
-              />
-            </label>
-            <div className="flex flex-wrap gap-3">
-              <button
-                type="submit"
-                className="inline-flex min-h-11 items-center justify-center rounded-md border border-accent bg-accent px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-[#8ff4e6]"
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            {contactItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                download={item.label === 'CV' ? true : undefined}
+                className="rounded-lg border border-line/70 bg-ink/45 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/70 hover:bg-ink/65"
               >
-                Send message
-              </button>
-              <button
-                type="button"
-                onClick={() => setIsFormOpen(false)}
-                className="inline-flex min-h-11 items-center justify-center rounded-md border border-line bg-panel px-5 py-2.5 text-sm font-semibold text-slate-100 transition-colors hover:border-accent hover:text-accent"
-              >
-                Cancel
-              </button>
-            </div>
-          </form>
-        ) : null}
-
-        <div className="mt-8 grid gap-3 sm:grid-cols-2">
-          {contactItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              download={item.label === 'CV' ? true : undefined}
-              onClick={item.label === 'Email' ? handleEmailClick : undefined}
-              className="rounded-lg border border-line bg-ink/40 p-5 transition-colors hover:border-accent"
-            >
-              <span className="text-xs font-bold uppercase tracking-[0.14em] text-accent">
-                {item.label}
-              </span>
-              <span className="mt-2 flex min-h-6 items-center text-sm font-semibold text-steel">
-                {item.icon}
-                {'value' in item ? (
-                  <span className="ml-3">{item.value}</span>
-                ) : (
-                  <span className="sr-only">{item.label}</span>
-                )}
-              </span>
-            </a>
-          ))}
+                <span className="text-xs font-bold uppercase tracking-[0.14em] text-accent">
+                  {item.label}
+                </span>
+                <span className="mt-2 flex min-h-6 items-center text-sm font-semibold text-steel">
+                  {item.icon}
+                  {'value' in item ? (
+                    <span className="ml-3">{item.value}</span>
+                  ) : (
+                    <span className="sr-only">{item.label}</span>
+                  )}
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </Section>

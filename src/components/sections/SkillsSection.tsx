@@ -9,13 +9,15 @@ export function SkillsSection() {
         {skills.map((skillGroup) => (
           <article
             key={skillGroup.group}
-            className="rounded-lg border border-line/70 bg-panel/45 p-5 transition-colors hover:border-accent/40"
+            className="surface-glow rounded-lg border border-line/70 bg-panel/45 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-panel/65"
           >
-            <h3 className="text-base font-semibold text-slate-100">{skillGroup.group}</h3>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {skillGroup.items.map((skill) => (
-                <SkillPill key={skill} label={skill} />
-              ))}
+            <div className="relative">
+              <h3 className="text-base font-semibold text-slate-100">{skillGroup.group}</h3>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {skillGroup.items.map((skill) => (
+                  <SkillPill key={skill} label={skill} />
+                ))}
+              </div>
             </div>
           </article>
         ))}
